@@ -435,34 +435,14 @@
       }
 
       .services {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        border-top: 1px solid var(--line);
+        width: min(100%, 1000px);
+        margin-inline: auto;
       }
 
-      .service {
-        display: flex;
-        align-items: baseline;
-        gap: 18px;
-        padding: 23px 4px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .service:nth-child(odd) {
-        margin-right: 30px;
-      }
-
-      .service-number {
-        color: var(--accent);
-        font-family: var(--serif);
-        font-size: 0.9rem;
-      }
-
-      .service h3 {
-        margin: 0;
-        font-family: var(--serif);
-        font-size: clamp(1.15rem, 2vw, 1.45rem);
-        font-weight: 400;
+      .services img {
+        display: block;
+        width: 100%;
+        height: auto;
       }
 
       .production-grid {
@@ -715,14 +695,6 @@
           gap: 32px;
         }
 
-        .services {
-          grid-template-columns: 1fr;
-        }
-
-        .service:nth-child(odd) {
-          margin-right: 0;
-        }
-
         .contact {
           min-height: 340px;
           padding-inline: 20px;
@@ -961,22 +933,10 @@
           </p>
         </div>
         <div class="services">
-          <article class="service">
-            <span class="service-number">01</span>
-            <h3>Bridal beauty</h3>
-          </article>
-          <article class="service">
-            <span class="service-number">02</span>
-            <h3>Soft glam</h3>
-          </article>
-          <article class="service">
-            <span class="service-number">03</span>
-            <h3>Event makeup</h3>
-          </article>
-          <article class="service">
-            <span class="service-number">04</span>
-            <h3>One-to-one lessons</h3>
-          </article>
+          <img
+            src="./images/services-catalogue.jpeg"
+            alt="Fanaka Beauty service catalogue with makeup services, rates, training, and contact details"
+          >
         </div>
       </section>
 
