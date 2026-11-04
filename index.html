@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f0e9">
+    <meta
+      name="description"
+      content="Faith Kakai, founder of Fanaka Beauty and Makeup Studio in Nairobi, Kenya. Professional, bridal, event, and production makeup artistry."
+    >
+    <link rel="icon" type="image/jpeg" href="./images/fanaka-logo.jpeg">
+    <title>Fanaka Beauty and Makeup Studio | Faith Kakai — Makeup Artist</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f5f0e9;
+        --paper-deep: #ebe3d8;
+        --ink: #211d1c;
+        --muted: #716761;
+        --accent: #bd6254;
+        --line: #d8cec2;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --page-width: 1160px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 88px;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      button {
+        color: inherit;
+        font: inherit;
+      }
+
+      .site-header {
+        position: sticky;
+        z-index: 5;
+        top: 0;
+        border-bottom: 1px solid var(--line);
+        background: rgb(245 240 233 / 94%);
+        backdrop-filter: blur(12px);
+      }
+
+      .header-inner,
+      main,
+      .footer-inner {
+        width: min(var(--page-width), calc(100% - 64px));
+        margin-inline: auto;
+      }
+
+      .header-inner {
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .wordmark {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.15rem;
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      .wordmark img {
+        display: block;
+        width: auto;
+        height: 56px;
+        max-width: 112px;
+        object-fit: contain;
+      }
+
+      .footer-inner .wordmark img {
+        height: 46px;
+        max-width: 92px;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+      }
+
+      .site-nav a,
+      .text-link {
+        font-size: 0.79rem;
+        font-weight: 600;
+        letter-spacing: 0.015em;
+        text-decoration: none;
+      }
+
+      .site-nav a:hover,
+      .text-link:hover {
+        color: var(--accent);
+      }
+
+      .nav-booking {
+        padding: 11px 16px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 42px;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .menu-icon,
+      .menu-icon::before,
+      .menu-icon::after {
+        display: block;
+        width: 22px;
+        height: 1.5px;
+        background: var(--ink);
+        content: "";
+      }
+
+      .menu-icon {
+        position: relative;
+      }
+
+      .menu-icon::before,
+      .menu-icon::after {
+        position: absolute;
+        left: 0;
+      }
+
+      .menu-icon::before {
+        top: -7px;
+      }
+
+      .menu-icon::after {
+        top: 7px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 0.69rem;
+        font-weight: 650;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        content: "";
+      }
+
+      .hero {
+        display: grid;
+        min-height: 660px;
+        grid-template-columns: 1fr 0.85fr;
+        align-items: center;
+        gap: clamp(48px, 9vw, 130px);
+        padding-block: 74px 96px;
+      }
+
+      .hero-copy {
+        max-width: 580px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-block: 28px 22px;
+        font-family: var(--serif);
+        font-size: clamp(4rem, 8.6vw, 7.5rem);
+        font-weight: 400;
+        letter-spacing: -0.085em;
+        line-height: 0.92;
+      }
+
+      h1 em,
+      .section-heading em {
+        color: var(--accent);
+        font-weight: 400;
+      }
+
+      .hero-copy > p {
+        max-width: 420px;
+        margin-bottom: 30px;
+        color: var(--muted);
+        font-family: var(--serif);
+        font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+        line-height: 1.65;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 19px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 650;
+        text-decoration: none;
+        transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+      }
+
+      .button:hover {
+        border-color: var(--ink);
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .button span {
+        color: var(--accent);
+        font-size: 1rem;
+      }
+
+      .hero-art {
+        position: relative;
+        display: grid;
+        min-height: 460px;
+        place-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 50% 40%, rgb(255 255 255 / 54%) 0 22%, transparent 22.5%),
+          linear-gradient(145deg, #e5d4c7, #ddc4b5 48%, #c99583);
+      }
+
+      .hero-art img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        object-fit: cover;
+      }
+
+      .art-note {
+        position: absolute;
+        z-index: 2;
+        right: 18px;
+        bottom: 18px;
+        padding: 9px 12px;
+        background: var(--paper);
+        color: var(--muted);
+        font-size: 0.62rem;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+      }
+
+      .hero-caption {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 12px;
+        color: var(--muted);
+        font-family: var(--serif);
+        font-size: 0.88rem;
+        font-style: italic;
+      }
+
+      .section {
+        padding-block: 98px;
+        border-top: 1px solid var(--line);
+      }
+
+      .section-topline {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 45px;
+      }
+
+      .section-heading {
+        max-width: 590px;
+        margin: 16px 0 0;
+        font-family: var(--serif);
+        font-size: clamp(2.5rem, 5vw, 4.7rem);
+        font-weight: 400;
+        letter-spacing: -0.075em;
+        line-height: 1;
+      }
+
+      .section-intro {
+        max-width: 330px;
+        margin-bottom: 3px;
+        color: var(--muted);
+        font-family: var(--serif);
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      .looks-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .look-card:nth-child(2) {
+        margin-top: 48px;
+      }
+
+      .look-image {
+        position: relative;
+        display: grid;
+        aspect-ratio: 0.81;
+        place-items: center;
+        overflow: hidden;
+        background: var(--paper-deep);
+      }
+
+      .look-card:nth-child(1) .look-image {
+        background: linear-gradient(155deg, #e8d8ca, #c99e8d);
+      }
+
+      .look-card:nth-child(2) .look-image {
+        background: linear-gradient(155deg, #d6cec5, #9b7972);
+      }
+
+      .look-card:nth-child(3) .look-image {
+        background: linear-gradient(155deg, #eee0cf, #c8a47f);
+      }
+
+      .look-image::before {
+        position: absolute;
+        width: 64%;
+        height: 64%;
+        border: 1px solid rgb(255 255 255 / 58%);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .look-image img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        object-fit: cover;
+      }
+
+      .look-image span {
+        z-index: 1;
+        color: rgb(255 255 255 / 90%);
+        font-family: var(--serif);
+        font-size: clamp(3rem, 7vw, 6rem);
+        font-style: italic;
+        letter-spacing: -0.08em;
+      }
+
+      .look-caption {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 15px;
+      }
+
+      .look-caption h3 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+
+      .look-caption p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.66rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .about {
+        display: grid;
+        grid-template-columns: 0.9fr 1fr;
+        gap: clamp(50px, 12vw, 170px);
+        align-items: start;
+      }
+
+      .about-quote {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.1rem, 4.2vw, 3.8rem);
+        letter-spacing: -0.065em;
+        line-height: 1.12;
+      }
+
+      .about-quote em {
+        color: var(--accent);
+      }
+
+      .about-copy {
+        max-width: 440px;
+        padding-top: 9px;
+      }
+
+      .about-copy p {
+        color: var(--muted);
+        font-family: var(--serif);
+        font-size: 1.08rem;
+        line-height: 1.8;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-top: 1px solid var(--line);
+      }
+
+      .service {
+        display: flex;
+        align-items: baseline;
+        gap: 18px;
+        padding: 23px 4px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .service:nth-child(odd) {
+        margin-right: 30px;
+      }
+
+      .service-number {
+        color: var(--accent);
+        font-family: var(--serif);
+        font-size: 0.9rem;
+      }
+
+      .service h3 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(1.15rem, 2vw, 1.45rem);
+        font-weight: 400;
+      }
+
+      .production-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: clamp(36px, 8vw, 100px);
+        align-items: start;
+      }
+
+      .production-copy {
+        max-width: 390px;
+      }
+
+      .production-copy p {
+        color: var(--muted);
+        font-family: var(--serif);
+        font-size: 1.08rem;
+        line-height: 1.8;
+      }
+
+      .production-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .production-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-top: 1px solid var(--line);
+      }
+
+      .production-item {
+        display: flex;
+        min-height: 78px;
+        align-items: baseline;
+        gap: 14px;
+        padding: 21px 8px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .production-item:nth-child(odd) {
+        margin-right: 22px;
+      }
+
+      .production-item span {
+        color: var(--accent);
+        font-family: var(--serif);
+        font-size: 0.88rem;
+      }
+
+      .production-item h3 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 1.05rem;
+        font-weight: 400;
+      }
+
+      .availability {
+        margin-top: 28px;
+        padding: 18px 20px;
+        border-left: 2px solid var(--accent);
+        background: rgb(235 227 216 / 65%);
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.7;
+      }
+
+      .availability strong {
+        color: var(--ink);
+      }
+
+      .contact {
+        position: relative;
+        display: flex;
+        min-height: 370px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 75px 24px;
+        background: var(--paper-deep);
+        text-align: center;
+      }
+
+      .contact .section-heading {
+        max-width: 660px;
+        margin-block: 17px 26px;
+      }
+
+      .contact-note {
+        max-width: 380px;
+        margin-bottom: 17px;
+        color: var(--muted);
+        font-family: var(--serif);
+        line-height: 1.65;
+      }
+
+      .contact-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 24px;
+        margin-bottom: 25px;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .contact-details a {
+        text-decoration-color: var(--line);
+        text-underline-offset: 3px;
+      }
+
+      .contact-details a:hover {
+        color: var(--accent);
+      }
+
+      .contact-link {
+        min-width: 180px;
+        border-color: var(--accent);
+        background: var(--accent);
+        color: white;
+      }
+
+      .contact-link:hover {
+        border-color: var(--ink);
+        color: var(--paper);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+      }
+
+      .footer-inner {
+        display: flex;
+        min-height: 82px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+
+      .footer-inner p {
+        margin: 0;
+      }
+
+      .footer-inner a {
+        text-decoration: none;
+      }
+
+      .footer-inner a:hover {
+        color: var(--accent);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 760px) {
+        .header-inner,
+        main,
+        .footer-inner {
+          width: min(100% - 40px, var(--page-width));
+        }
+
+        .header-inner {
+          min-height: 68px;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+        }
+
+        .site-nav {
+          position: absolute;
+          top: calc(100% + 1px);
+          right: 0;
+          left: 0;
+          display: none;
+          align-items: stretch;
+          gap: 0;
+          padding: 8px 20px 20px;
+          border-bottom: 1px solid var(--line);
+          background: var(--paper);
+        }
+
+        .site-nav.is-open {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .site-nav a {
+          padding: 14px 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .site-nav .nav-booking {
+          margin-top: 12px;
+          padding: 12px 16px;
+          border: 1px solid var(--ink);
+          text-align: center;
+        }
+
+        .hero {
+          min-height: 0;
+          grid-template-columns: 1fr;
+          gap: 42px;
+          padding-block: 75px 70px;
+        }
+
+        h1 {
+          max-width: 550px;
+          font-size: clamp(4rem, 15vw, 6.2rem);
+        }
+
+        .hero-art {
+          min-height: min(105vw, 480px);
+        }
+
+        .section {
+          padding-block: 72px;
+        }
+
+        .section-topline {
+          align-items: start;
+          flex-direction: column;
+          margin-bottom: 32px;
+        }
+
+        .looks-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 28px 14px;
+        }
+
+        .look-card:nth-child(2) {
+          margin-top: 0;
+        }
+
+        .look-card:nth-child(3) {
+          grid-column: 1 / -1;
+          width: calc(50% - 7px);
+        }
+
+        .about {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .production-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .services {
+          grid-template-columns: 1fr;
+        }
+
+        .service:nth-child(odd) {
+          margin-right: 0;
+        }
+
+        .contact {
+          min-height: 340px;
+          padding-inline: 20px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .header-inner,
+        main,
+        .footer-inner {
+          width: calc(100% - 36px);
+        }
+
+        .production-list {
+          grid-template-columns: 1fr;
+        }
+
+        .production-item:nth-child(odd) {
+          margin-right: 0;
+        }
+
+        .looks-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .look-card:nth-child(3) {
+          grid-column: auto;
+          width: 100%;
+        }
+
+        .look-image {
+          aspect-ratio: 0.95;
+        }
+
+        .look-image span {
+          font-size: 5rem;
+        }
+
+        .look-caption {
+          align-items: start;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .footer-inner {
+          min-height: 76px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="#home" aria-label="Fanaka Beauty and Makeup Studio home">
+          <img src="./images/fanaka-logo.jpeg" alt="">
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#looks">Looks</a>
+          <a href="#about">About</a>
+          <a href="#productions">Productions</a>
+          <a href="#services">Services</a>
+          <a class="nav-booking" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">Faith Kakai · Makeup artist</div>
+          <h1 id="hero-title">A little more <em>you.</em></h1>
+          <p>
+            Makeup for the moments you want to remember. Thoughtful, personal beauty
+            that lets you feel like yourself—only a little more luminous.
+          </p>
+          <a class="button" href="#looks">Explore the portfolio <span aria-hidden="true">↘</span></a>
+        </div>
+
+        <div>
+          <div class="hero-art">
+            <img src="./images/soft-glam.jpeg" alt="Soft glam makeup by Faith Kakai">
+            <span class="art-note">Beauty, made personal</span>
+          </div>
+          <div class="hero-caption">
+            <span>Beauty, made personal</span>
+            <span>01 / 03</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="looks" aria-labelledby="looks-title">
+        <div class="section-topline">
+          <div>
+            <div class="eyebrow">A few favorite directions</div>
+            <h2 class="section-heading" id="looks-title">The art of <em>the look.</em></h2>
+          </div>
+          <p class="section-intro">
+            A space for the faces, colors, and little details that tell a story.
+            Your finished looks will live here.
+          </p>
+        </div>
+        <div class="looks-grid">
+          <article class="look-card">
+            <div class="look-image">
+              <img
+                src="./images/soft-glam-new.jpeg"
+                alt="Soft glam makeup look by Faith Kakai"
+              >
+            </div>
+            <div class="look-caption">
+              <h3>Soft glam</h3>
+              <p>Makeup by Faith</p>
+            </div>
+          </article>
+          <article class="look-card">
+            <div class="look-image">
+              <img src="./images/soft-glam.jpeg" alt="Bridal makeup look by Faith Kakai">
+            </div>
+            <div class="look-caption">
+              <h3>Modern bridal</h3>
+              <p>Makeup by Faith</p>
+            </div>
+          </article>
+          <article class="look-card">
+            <div class="look-image">
+              <img src="./images/touch-of-colour.jpeg" alt="Colourful makeup look by Faith Kakai">
+            </div>
+            <div class="look-caption">
+              <h3>A touch of colour</h3>
+              <p>Makeup by Faith</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div>
+          <div class="eyebrow">The artist behind the brush</div>
+          <h2 class="section-heading" id="about-title">Makeup should feel like <em>you.</em></h2>
+        </div>
+        <div class="about-copy">
+          <blockquote class="about-quote">
+            “The best kind of beauty is the kind that feels <em>like your own.</em>”
+          </blockquote>
+          <p>
+            My name is Faith Kakai, a professional makeup artist and founder of
+            Fanaka Beauty and Makeup Studio in Nairobi, Kenya. I love enhancing
+            natural beauty and creating looks that help every client feel their best.
+          </p>
+          <p>
+            My experience includes professional beauty makeup, soft glam, bridal
+            and event makeup, and client transformations. Each look is tailored to
+            the person, the occasion, and the creative vision.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="productions" aria-labelledby="productions-title">
+        <div class="section-topline">
+          <div>
+            <div class="eyebrow">Available for freelance and full-time work</div>
+            <h2 class="section-heading" id="productions-title">Ready for <em>your production.</em></h2>
+          </div>
+          <p class="section-intro">
+            Professional, camera-ready makeup shaped around your team, talent,
+            and creative brief.
+          </p>
+        </div>
+        <div class="production-grid">
+          <div class="production-copy">
+            <p>
+              I would be delighted to bring my makeup services to your production.
+              I work to meet the creative and professional standards of each project,
+              from the first conversation through the final look.
+            </p>
+            <div class="availability">
+              <strong>Open to opportunities</strong><br>
+              Freelance assignments, project-based contracts, and permanent roles.
+            </div>
+          </div>
+          <div class="production-list" aria-label="Production work">
+            <article class="production-item">
+              <span>01</span>
+              <h3>Television & reality shows</h3>
+            </article>
+            <article class="production-item">
+              <span>02</span>
+              <h3>Film & drama</h3>
+            </article>
+            <article class="production-item">
+              <span>03</span>
+              <h3>Commercials & advertising</h3>
+            </article>
+            <article class="production-item">
+              <span>04</span>
+              <h3>Music videos & photoshoots</h3>
+            </article>
+            <article class="production-item">
+              <span>05</span>
+              <h3>Talent, modelling & casting</h3>
+            </article>
+            <article class="production-item">
+              <span>06</span>
+              <h3>Corporate & entertainment events</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-topline">
+          <div>
+            <div class="eyebrow">Professional makeup artistry</div>
+            <h2 class="section-heading" id="services-title">What I can <em>create.</em></h2>
+          </div>
+          <p class="section-intro">
+            Beauty looks for your event, your camera, and your own idea of beautiful.
+          </p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <span class="service-number">01</span>
+            <h3>Bridal beauty</h3>
+          </article>
+          <article class="service">
+            <span class="service-number">02</span>
+            <h3>Soft glam</h3>
+          </article>
+          <article class="service">
+            <span class="service-number">03</span>
+            <h3>Event makeup</h3>
+          </article>
+          <article class="service">
+            <span class="service-number">04</span>
+            <h3>One-to-one lessons</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="eyebrow">Nairobi, Kenya · Available for bookings</div>
+        <h2 class="section-heading" id="contact-title">Let’s make something <em>beautiful.</em></h2>
+        <p class="contact-note">
+          For production opportunities, bookings, or to discuss your creative brief,
+          get in touch with Faith.
+        </p>
+        <div class="contact-details">
+          <a href="tel:0741995129">0741 995 129</a>
+          <a href="mailto:fanakabeauty254@gmail.com">fanakabeauty254@gmail.com</a>
+          <span>Faith Kakai · Founder, Fanaka Beauty and Makeup Studio</span>
+        </div>
+        <a class="button contact-link" href="mailto:fanakabeauty254@gmail.com?subject=Makeup%20artist%20booking">
+          Contact Faith <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="wordmark" href="#home" aria-label="Fanaka Beauty and Makeup Studio home">
+          <img src="./images/fanaka-logo.jpeg" alt="">
+        </a>
+        <p>Faith Kakai · Makeup artist · Nairobi, Kenya</p>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector("#site-nav");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+        siteNav.classList.toggle("is-open", !isOpen);
+      });
+
+      siteNav.addEventListener("click", (event) => {
+        if (event.target instanceof HTMLAnchorElement) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+          siteNav.classList.remove("is-open");
+        }
+      });
+    </script>
+  </body>
+</html>
